@@ -1,16 +1,19 @@
-A Katacoda scenario is a series of Markdown files, bash scripts and a JSON file to define how your scenario should be configured, the text for the scenario and any automation required.
+Install OneAgent Operator 
 
-Task
-Clone our example repository that contains the set of documentation with the following command:
+Create the necessary objects for OneAgent Operator. OneAgent Operator acts on its separate namespace dynatrace. It holds the operator deployment and all dependent objects like permissions, custom resources and the corresponding DaemonSet. You can also observe the logs of OneAgent Operator.
 
-git clone https://github.com/katacoda/scenario-examples.git katacoda-scenario-examples{{execute}}
+`kubectl create namespace dynatrace` {{execute}}
 
-Within the repository, you will see a set of examples of implementing various Katacoda functionality.
+`LATEST_RELEASE=$(curl -s https://api.github.com/repos/dynatrace/dynatrace-oneagent-operator/releases/latest | grep tag_name | cut -d '"' -f 4)` {{execute}}
 
-The scenario you are currently reading is in the directory ls -lha katacoda-scenario-examples/create-scenario-101{{execute}}. The directory name is what defines the URL.
+`kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml` {{execute}}
 
-An example of the current step is katacoda-scenario-examples/create-scenario-101/step1.md{{open}}
+`kubectl -n dynatrace logs -f deployment/dynatrace-oneagent-operator` {{execute}}
 
-All the steps are collected via a JSON file, for example, katacoda-scenario-examples/create-scenario-101/index.json{{open}}.
+Create the secret holding API and PaaS tokens for authenticating to the Dynatrace cluster. The name of the secret is important in a later step when you configure the custom resource (.spec.tokens). In the following code-snippet the name is oneagent. Be sure to replace API_TOKEN and PAAS_TOKEN with the values explained above.
 
-The JSON file defines the scenario title, the description, steps order, the UI layout and environment. You can find more about the layouts within our scenarios at katacoda.com/docs/scenarios/layouts and environments at katacoda.com/docs/scenarios/environments.
+`kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=API_TOKEN" --from-literal="paasToken=PAAS_TOKEN"` {{execute}}
+
+`cr.yaml` {{open}}
+
+`$ curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml` {{execute}}
