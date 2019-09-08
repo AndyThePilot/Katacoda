@@ -16,10 +16,10 @@ Verify that the ingress controller is running `kubectl get pods -n kube-system`{
 
 Verify which service host a given URL:
 
-<pre>http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/apple
-http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/banana
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/apple<pre>
+</pre>http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/banana
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/something
-</pre>
+
 
 
 
