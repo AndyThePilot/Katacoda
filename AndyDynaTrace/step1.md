@@ -8,19 +8,19 @@ The status can be viewed with `kubectl get deployment`{{execute}} and with `kube
 
 Enable Nginx-based Ingress extension in minikube: `minikube addons enable ingress`{{execute}}
 
-Verify that the ingress controller is running `kubectl get pods -n kube-system`{{execute}}
-
 Review the routing `cat ingress.yaml`{{execute}}
 
 Create Ingress in the clsuter `kubectl create -f ingress.yaml`{{execute}}
 
+Verify that the ingress controller is running `kubectl get pods -n kube-system`{{execute}}
+
 Verify which service host a given URL:
 
-http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/apple
+`http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/apple
 
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/banana
 
-http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/something
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/something`
 
 
 
