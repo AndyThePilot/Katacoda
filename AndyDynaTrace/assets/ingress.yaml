@@ -83,5 +83,5 @@ spec:
   selector:
     app: nginx-ingress
   externalIPs:
-    - $HOST_IP
+    - $HOST1_IP
     
