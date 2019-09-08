@@ -12,5 +12,5 @@ Review the ingress.yaml `cat ingress.yaml`{{execute}}
 
 Deploy the  Ingress controller `kubectl create -f ingress.yaml`{{execute}}
 
-The status can be identified using `kubectl get deployment -n nginx-ingress` {{execute}}
+The status can be identified using `kubectl get deployment -n nginx-ingress`{{execute}}
 
