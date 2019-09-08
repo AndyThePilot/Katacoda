@@ -11,7 +11,7 @@
         "target": "~/"
       },
       {
-        "file": "delpoyment.yaml",
+        "file": "deployment.yaml",
         "target": "~/"
       }
       ]},
