@@ -10,3 +10,7 @@ The YAML file ingress.yaml defines a Nginx-based Ingress controller together wit
 
 Review the ingress.yaml `cat ingress.yaml`{{execute}}
 
+Deploy the  Ingress controller `kubectl create -f ingress.yaml`{{execute}}
+
+The status can be identified using `kubectl get deployment -n nginx-ingress` {{execute}}
+
