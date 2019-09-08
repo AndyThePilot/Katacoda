@@ -13,6 +13,10 @@
       {
         "file": "deployment.yaml",
         "target": "/root"
+      },
+      {
+        "file": "ingress.yaml",
+        "target": "/root"
       }
       ]},
       
