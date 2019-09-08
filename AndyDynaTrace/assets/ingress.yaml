@@ -17,5 +17,5 @@ spec:
             serviceName: webapp2-svc 
             servicePort: 80
         - backend:
-            serviceName: webapp2-svc 
+            serviceName: webapp3-svc 
             servicePort: 80
