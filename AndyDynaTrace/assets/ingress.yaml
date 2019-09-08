@@ -84,3 +84,4 @@ spec:
     app: nginx-ingress
   externalIPs:
     - $HOST_IP
+    
