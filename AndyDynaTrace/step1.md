@@ -6,11 +6,13 @@ Deploy those definitions with `kubectl apply -f deployment.yaml`{{execute}}
 
 The status can be viewed with `kubectl get deployment`{{execute}} and with `kubectl get pods`{{execute}} 
 
-The YAML file ingress.yaml defines a Nginx-based Ingress controller together with a service making it available on Port 80 to external connections using ExternalIPs.
+Enable Nginx-based Ingress extension in minikube: `minikube addons enable ingress`{{execute}}
 
-Review the ingress.yaml `cat ingress.yaml`{{execute}}
+Verify that the ingress controller is running `kubectl get pods -n kube-system`{{execute}}
 
-Deploy the  Ingress controller `kubectl create -f ingress.yaml`{{execute}}
+Review the routing `cat ingress.yaml`{{execute}}
 
-The status can be identified using `kubectl get deployment -n nginx-ingress`{{execute}}
+Create Ingress in the clsuter `kubectl create -f ingress.yaml`{{execute}}
+
+
 
