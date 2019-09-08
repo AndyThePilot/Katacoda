@@ -10,5 +10,5 @@ The status can be viewed with `kubectl get deployment`{{execute}} and with `kube
 
 The YAML file ingress.yaml defines a Nginx-based Ingress controller together with a service making it available on Port 80 to external connections using ExternalIPs.
 
-Review the ingress.yaml `cat ingress.yaml`.
+Review the ingress.yaml `cat ingress.yaml`{{execute}}
 
