@@ -4,6 +4,18 @@
   "difficulty": "Beginner",
   "time": "30",
   "details": {
+	"assets": {
+      "client": [
+      {
+        "file": "cr.yaml",
+        "target": "~/"
+      },
+      {
+        "file": "delpoyment.yaml",
+        "target": "~/"
+      }
+      ]},
+      
     "steps": [
       {
         "title": "Step 1",
