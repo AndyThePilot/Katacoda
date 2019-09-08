@@ -14,9 +14,14 @@ Create resources
 
 `kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml`{{execute}}
 
-Create K8S secret holding API and PaaS tokens for authenticating to the Dynatrace cluster. Replace API_TOKEN and PAAS_TOKEN fields in `cr.yaml`{{open}} with the values taken from Dynatrace SaaS. 
+Create K8S secret holding API and PaaS tokens for authenticating to the Dynatrace cluster. Replace API_TOKEN and PAAS_TOKEN fields in the line below with the values taken from Dynatrace SaaS. 
 
 `kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=API_TOKEN" --from-literal="paasToken=PAAS_TOKEN"`{{copy}}
+
+Download cr.yaml
+
+`curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml`{{execute}}
+
 
 Replace API_TOKEN and PAAS_TOKEN fields in `cr.yaml`{{open}} with the values taken from Dynatrace SaaS.
 
@@ -25,3 +30,7 @@ Replace API_TOKEN and PAAS_TOKEN fields in `cr.yaml`{{open}} with the values tak
 Create resources
 
 `kubectl create -f cr.yaml`{{execute}}
+
+Check if the pods are running
+
+`kubectl get pods -n dynatrace -w`{{execute}}
