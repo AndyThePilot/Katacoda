@@ -6,7 +6,7 @@ Create the necessary objects for OneAgent Operator. OneAgent Operator acts on it
 
 `LATEST_RELEASE=$(curl -s https://api.github.com/repos/dynatrace/dynatrace-oneagent-operator/releases/latest | grep tag_name | cut -d '"' -f 4)`{{execute}}
 
-`kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml` {{execute}}
+`kubectl create -f https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/kubernetes.yaml`{{execute}}
 
 `kubectl -n dynatrace logs -f deployment/dynatrace-oneagent-operator`{{execute}}
 
@@ -14,6 +14,6 @@ Create the secret holding API and PaaS tokens for authenticating to the Dynatrac
 
 `kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=API_TOKEN" --from-literal="paasToken=PAAS_TOKEN"`{{execute}}
 
-`cr.yaml`{{open}}
+`Katacoda/AndyDynaTrace/cr.yaml`{{open}}
 
 `$ curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml`{{execute}}
