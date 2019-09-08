@@ -82,6 +82,4 @@ spec:
     name: https
   selector:
     app: nginx-ingress
-  externalIPs:
-    - $HOST1_IP
     
