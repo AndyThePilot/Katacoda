@@ -14,6 +14,6 @@ Create the secret holding API and PaaS tokens for authenticating to the Dynatrac
 
 `kubectl -n dynatrace create secret generic oneagent --from-literal="apiToken=API_TOKEN" --from-literal="paasToken=PAAS_TOKEN"`{{execute}}
 
-`Katacoda/AndyDynaTrace/cr.yaml`{{open}}
+`AndyDynaTrace/cr.yaml`{{open}}
 
 `$ curl -o cr.yaml https://raw.githubusercontent.com/Dynatrace/dynatrace-oneagent-operator/$LATEST_RELEASE/deploy/cr.yaml`{{execute}}
