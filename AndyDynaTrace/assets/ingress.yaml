@@ -84,4 +84,3 @@ spec:
     app: nginx-ingress
   externalIPs:
     - 172.17.0.47
-master $
