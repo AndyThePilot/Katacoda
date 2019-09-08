@@ -1,0 +1,1 @@
+This demo will let you play around with the Kubernetes cluster and the Dynatrace SaaS platform which gives the vertical, full-stack insight into the environments based on K8S. Put your hands on K8S deployments, automatition, 
