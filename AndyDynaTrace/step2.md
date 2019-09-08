@@ -20,7 +20,7 @@ Create K8S secret holding API and PaaS tokens for authenticating to the Dynatrac
 
 Replace API_TOKEN and PAAS_TOKEN fields in `cr.yaml`{{open}} with the values taken from Dynatrace SaaS.
 
-`nano cr.yaml`{{open}}
+`nano cr.yaml`{{execute}}
 
 Create resources
 
