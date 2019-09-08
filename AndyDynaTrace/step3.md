@@ -8,4 +8,4 @@ Change permissions
 
 Run the installer
 
-`./Dyn*`{{execute}
+`./Dyn*`{{execute}}
