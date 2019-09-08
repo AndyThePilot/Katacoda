@@ -8,11 +8,11 @@
       "client": [
       {
         "file": "cr.yaml",
-        "target": "~/"
+        "target": "/root"
       },
       {
         "file": "deployment.yaml",
-        "target": "~/"
+        "target": "/root"
       }
       ]},
       
