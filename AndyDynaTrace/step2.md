@@ -31,6 +31,6 @@ Create resources
 
 `kubectl create -f cr.yaml`{{execute}}
 
-Check if the pods are running
+Check if OneAgent pods are running
 
-`kubectl get pods -n dynatrace -w`{{execute}}
+`kubectl get pods -n dynatrace`{{execute}}
