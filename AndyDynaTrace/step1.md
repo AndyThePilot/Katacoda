@@ -30,6 +30,9 @@ Generate the load to your workload <pre>
 </pre>
 and verify the CPU load `top`{{execute}}. Try to load the Apache process with 60% of the CPU, add extra load if required.
 
+Scale the Apache process manually `kubectl scale --replicas=3 deployment/webapp3`{{execute}} and verify the pods `kubectl get deployment webapp3`{{execute}}
+
+
 Run the autoscaler `kubectl autoscale deployment webapp3 --cpu-percent=50 --min=1 --max=10`{{execute}} and verify the number of pods again `kubectl get hpa`{{execute}}
 
 
