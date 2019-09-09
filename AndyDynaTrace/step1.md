@@ -24,6 +24,13 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com<pre>
 
 The last URL is based on a  to a custom http server image  with embedded php code highly consuming the CPU, we gonna use it alter one.
 
+Generate the load to your workload to <pre>
+</pre>
+`while true; do curl https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com; done`{{execute}}<pre>
+</pre>
+and verify the load `top`{{execute}}. Try to load the Apache pod with 60% of the CPU, add extra load if required.
+
+
 
 
 
