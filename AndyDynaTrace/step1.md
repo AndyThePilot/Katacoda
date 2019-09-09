@@ -42,7 +42,7 @@ and verify the CPU load `top`{{execute}}. Try to load the process with 60% of th
 
 Scale the Apache deployment manually `kubectl scale --replicas=3 deployment/webapp3`{{execute}} and verify the pods `kubectl get deployment webapp3`{{execute}}
 
-Enable heapster to enable autoscaling `minikube addons enable heapster`{{execute}}
+Enable metrics-server add-on to enable autoscaling `minikube addons enable metrics-server`{{execute}}
 
 Run the autoscaler `kubectl autoscale deployment webapp3 --cpu-percent=30 --min=1 --max=10`{{execute}} and verify the number of pods again `kubectl get hpa`{{execute}}
 
