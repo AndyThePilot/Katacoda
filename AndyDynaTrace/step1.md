@@ -24,13 +24,13 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com<pre>
 
 The last URL is based on a custom http server image  with embedded php code highly consuming the CPU.
 <pre>
-`<php
+<php
   $x = 0.0001;
   for ($i = 0; $i <= 1000000; $i++) {
     $x += sqrt($x);
   }
   echo "OK!";
-?>`
+?>
 </pre>
 
 Generate the load to your Apache workload <pre>
