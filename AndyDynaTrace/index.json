@@ -18,7 +18,8 @@
         "file": "ingress.yaml",
         "target": "/root"
       },
-          "file": "hpa.yaml",
+      {
+        "file": "hpa.yaml",
         "target": "/root"
       }
       ]},
