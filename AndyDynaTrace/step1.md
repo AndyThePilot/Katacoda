@@ -22,7 +22,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/apple<
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com<pre>
 </pre>
 
-The last URL is based on a  to a custom http server image  with embedded php code highly consuming the CPU, we gonna use it alter one.
+The last URL is based on a custom http server image  with embedded php code highly consuming the CPU, we gonna use it alter one.
 
 Generate the load to your workload to <pre>
 </pre>
