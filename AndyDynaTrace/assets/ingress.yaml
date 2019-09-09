@@ -19,7 +19,4 @@ spec:
         - backend:
             serviceName: webapp3-svc 
             servicePort: 80
-        - path: /loadtest
-          backend:
-            serviceName: webapp4-svc 
-            servicePort: 80
+   
